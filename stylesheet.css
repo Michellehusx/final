@@ -1,0 +1,184 @@
+@import url("normalizecss.css");
+
+body{
+	padding:20px;
+	background: #FBFBFD,#F0EEEF;
+
+
+}
+
+	
+#google{
+	border:1px solid black;
+	background:#F2F3F4;
+	padding:5px;
+}
+.bildeforside{
+	height: 200px;
+	width:200px;
+	float:left;
+	padding:10px;
+	border:2px solid black;
+	margin:10px;
+}
+.wrapper {
+	margin:auto;
+	width: 1500px;
+	grid-column-gap:10px;
+	grid-row-gap:10px;
+	max-width:100%;
+	max-height: 2000px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+      "hd hd"
+      "nv nv"
+      "sd main "
+      "ft ft";
+}
+
+
+.head {
+    grid-area: hd;
+
+   
+   
+}
+.foot {
+	border:1px solid black;
+	background-color: #E8F8F5  ;
+    grid-area: ft;
+     
+}
+.main {
+    grid-area: main;
+    border:1px solid black;
+    background-color: #D6EAF8  ;
+     
+}
+
+.menu {
+	  grid-area:nv;
+	  position:fixed;
+      top:0;
+      width:100%;
+	  background-color: #E8F8F5 ;
+	  opacity: 0.9;
+	  border-top:1px solid black;
+	  border-bottom: 1px solid black;
+	  
+
+}
+
+
+
+.side {
+	grid-area:sd;
+	background-color: #FDEDEC  ;
+	  border:1px solid black;
+}
+
+.flexit{
+	display:flex;
+
+    
+	
+}
+
+.first{
+	padding:20px;
+}
+
+.second{
+	padding:20px;
+}
+
+
+article{
+	font-family: 'Raleway', sans-serif;
+}
+header	{
+	margin-top:100px;
+	height: 200px;
+	font-size:30px;
+font-family: 'Raleway', sans-serif;
+    background-image: url("briller.jpg"),url("briller.jpg");
+    background-position: 10%,90%;
+    background-size: 300px;
+	background-repeat: no-repeat;
+	text-align:center;
+}
+h1{
+	font-family: 'Raleway', sans-serif;
+}
+/*Her styler jeg menyen min*/
+nav ol li{
+    text-transform: uppercase;
+	list-style: none;
+	text-decoration: none;
+	display:inline-block;
+	margin:20px;
+	font-size:30px;
+	position: relative;
+
+}
+ol{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+
+ul li{
+	margin:20px;
+	list-style: none;
+	font-size: 20px;
+	font-family: 'Raleway', sans-serif;
+}
+a{
+	text-decoration:none;
+	color:black;
+}
+
+
+a:hover{
+	color:gray;
+}
+
+nav a::before{
+	content:" ";
+	display:block;
+	height: 3px;
+	width:0%;
+	background-color: black;
+	position: absolute;
+	top:0;
+	transition: all ease-in-out 250ms; /*lagde en transition så stekene over teksten ikke skulle gå så fort*/
+
+}
+
+nav a:hover::before{
+	width:100%;
+}
+
+p a{
+	background-color: #F2F3F4;
+	padding:5px;
+	border: 1px solid black;
+}
+section{
+	background-color: white;
+	text-align: center;
+	margin-top:50px;
+	padding:20px;
+	border:1px solid black;
+	margin:10px;
+
+}
+footer p {
+	font-style: italic;
+	font-size: 20px;
+	margin-top:50px;
+	text-align: center;
+
+}
+
